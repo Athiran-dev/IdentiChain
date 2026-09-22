@@ -21,7 +21,7 @@ export default function BackendTestHarness() {
   const [assetFile, setAssetFile] = useState(null);
   const [accessId, setAccessId] = useState('');
 
-  const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+  const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://identichain-backend.onrender.com';
 
   const addLog = (method, endpoint, status, body) => {
     setLogs(prev => [{

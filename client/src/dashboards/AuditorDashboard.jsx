@@ -92,7 +92,7 @@ export default function AuditorDashboard() {
     }
     
     const token = sessionStorage.getItem('token');
-    const url = `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'}/api/audit/export${query}`;
+    const url = `${import.meta.env.VITE_API_BASE_URL || 'https://identichain-backend.onrender.com'}/api/audit/export${query}`;
     
     fetch(url, {
       headers: { 'Authorization': `Bearer ${token}` }
