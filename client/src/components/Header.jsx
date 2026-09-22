@@ -30,10 +30,9 @@ const Header = () => {
             
             <nav className="header-nav">
               <NavLink href="/" active={true}>Home</NavLink>
-              <NavLink href="#platform">Platform</NavLink>
-              <NavLink href="#solutions">Solutions</NavLink>
-              <NavLink href="#security">Security</NavLink>
-              <NavLink href="#resources">Resources</NavLink>
+              <NavLink href="#services">Platform</NavLink>
+              <NavLink href="#workflow">Solutions</NavLink>
+              <NavLink href="#footer">Resources</NavLink>
             </nav>
           </div>
 

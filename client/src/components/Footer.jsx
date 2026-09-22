@@ -5,7 +5,7 @@ import { ArrowUp, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer style={{ display: 'flex', flexDirection: 'column' }}>
+    <footer id="footer" style={{ display: 'flex', flexDirection: 'column' }}>
       {/* Top CTA Section */}
       <div style={{
         backgroundColor: '#0a1945',

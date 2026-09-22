@@ -36,7 +36,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section style={{ padding: '6rem 2rem', background: 'var(--background-light)' }}>
+    <section id="workflow" style={{ padding: '6rem 2rem', background: 'var(--background-light)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <span style={{ fontSize: '0.9rem', fontWeight: 800, color: 'var(--primary-blue)', textTransform: 'uppercase', letterSpacing: '2px' }}>Platform Workflow</span>
