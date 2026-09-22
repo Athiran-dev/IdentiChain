@@ -1,4 +1,7 @@
-<h1 align="center">IdentiChain</h1>
+<h1 align="center">
+  <img src="logo.png" alt="IdentiChain Logo" width="150" /><br>
+  IdentiChain
+</h1>
 
 <p align="center">
   <b>Blockchain-Based Secure Platform for Identity, Access Control, and Digital Asset Management</b><br>
