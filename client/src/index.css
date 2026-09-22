@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-dark: #1a202c; /* Deep rich navy/slate */
+  --primary-blue: #2d3748; /* Slate gray instead of bright blue */
+  --primary-blue-hover: #1a202c;
+  --bg-light: #e8e8e8;
+  --bg-gray: #e8e8e8;
+  --text-dark: #2d3748;
+  --text-muted: #718096;
+  --border-color: transparent;
+  --success-green: #38a169;
+  
+  /* Pure Neomorphism System */
+  --neo-bg: #e8e8e8;
+  --neo-shadow-light: #ffffff;
+  --neo-shadow-dark: #c5c5c5;
+  
+  --neo-outset: 12px 12px 24px var(--neo-shadow-dark), -12px -12px 24px var(--neo-shadow-light);
+  --neo-outset-sm: 6px 6px 12px var(--neo-shadow-dark), -6px -6px 12px var(--neo-shadow-light);
+  --neo-inset: inset 8px 8px 16px var(--neo-shadow-dark), inset -8px -8px 16px var(--neo-shadow-light);
+  --neo-inset-deep: inset 12px 12px 24px var(--neo-shadow-dark), inset -12px -12px 24px var(--neo-shadow-light);
+}
+
+[data-theme='dark'] {
+  --primary-dark: #e2e8f0;
+  --primary-blue: #60a5fa;
+  --primary-blue-hover: #3b82f6;
+  --bg-light: #0f172a;
+  --bg-gray: #1e293b;
+  --text-dark: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --success-green: #4ade80;
+  
+  --neo-bg: #0f172a;
+  --neo-shadow-light: #1e293b;
+  --neo-shadow-dark: #020617;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--neo-bg);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-dark);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Pure Neomorphism Cards */
+.glass-card-primary, .glass-card-secondary {
+  background: var(--neo-bg);
+  border-radius: 24px;
+  box-shadow: var(--neo-outset);
+  border: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-primary:hover, .glass-card-secondary:hover {
+  box-shadow: var(--neo-inset);
+  transform: translateY(0);
+}
+/* Common Components - Neo-Glass Buttons */
+.btn-primary, .btn-outline {
+  position: relative;
+  padding: 0.8em 1.5em;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  cursor: pointer;
+  line-height: 1;
+  background: transparent;
+  border-radius: 999px;
+  border: none;
+  transition: transform 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary::after, .btn-outline::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--neo-bg);
+  border-radius: inherit;
+  z-index: -1;
+  box-shadow: var(--neo-outset-sm);
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover, .btn-outline:hover {
+  transform: translateY(0);
+  text-decoration: none;
+  color: var(--primary-dark);
+}
+
+.btn-primary:active, .btn-outline:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.btn-primary:hover::after, .btn-outline:hover::after,
+.btn-primary:active::after, .btn-outline:active::after {
+  box-shadow: var(--neo-inset);
+}
+
+.btn-primary span, .btn-outline span {
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 900px) {
+  .header-container { flex-direction: column !important; align-items: stretch !important; gap: 1rem !important; }
+  .header-left { flex-direction: column !important; gap: 1rem !important; }
+  .header-nav { display: flex !important; flex-wrap: wrap !important; justify-content: center !important; }
+  .header-right { justify-content: center !important; }
+  .hero-grid { grid-template-columns: 1fr !important; gap: 2rem !important; text-align: center !important; }
+  .hero-grid img { margin: 0 auto !important; }
+  .hero-buttons { justify-content: center !important; flex-wrap: wrap !important; }
+  .login-grid { grid-template-columns: 1fr !important; }
+}
