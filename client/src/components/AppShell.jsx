@@ -58,11 +58,7 @@ export default function AppShell() {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', transition: 'background 0.3s ease' }}>
-      <header style={{ 
-        padding: '1rem 2rem', 
-        display: 'flex', 
-        justifyContent: 'space-between', 
-        alignItems: 'center',
+      <header className="appshell-header-container" style={{ 
         boxShadow: '0 4px 30px rgba(0, 0, 0, 0.05)',
         marginBottom: '2rem',
         background: theme === 'dark' ? 'rgba(15, 23, 42, 0.7)' : 'rgba(255, 255, 255, 0.7)',

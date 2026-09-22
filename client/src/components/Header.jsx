@@ -13,15 +13,7 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div style={{
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      zIndex: 1000,
-      display: 'flex',
-      flexDirection: 'column'
-    }}>
+    <div className="header-fixed-wrapper">
       {/* Unified Glassmorphic Header Block */}
       <div style={{
         display: 'flex',
@@ -29,23 +21,14 @@ const Header = () => {
         boxShadow: '0 4px 30px rgba(0, 0, 0, 0.05)'
       }}>
         {/* IdentiChain Nav Bar */}
-        <header className="header-container" style={{ 
-          background: theme === 'dark' ? 'rgba(15, 23, 42, 0.95)' : 'rgba(255, 255, 255, 0.95)',
-          backdropFilter: 'blur(12px)',
-          borderBottom: '1px solid var(--border-color)',
-          padding: '0.75rem 2rem',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          transition: 'background 0.3s ease'
-        }}>
-          <div className="header-left" style={{ display: 'flex', alignItems: 'center', gap: '3rem' }}>
-            <Link to="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <img src={logo} alt="IdentiChain" style={{ height: '48px' }} />
-              <span style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--primary-dark)', letterSpacing: '-0.5px' }}>IDENTICHAIN</span>
+        <header className="header-container">
+          <div className="header-left">
+            <Link to="/" className="header-logo-link">
+              <img src={logo} alt="IdentiChain" className="header-logo-img" />
+              <span className="header-logo-text">IDENTICHAIN</span>
             </Link>
             
-            <nav className="header-nav" style={{ display: 'flex', gap: '1rem' }}>
+            <nav className="header-nav">
               <NavLink href="/" active={true}>Home</NavLink>
               <NavLink href="#platform">Platform</NavLink>
               <NavLink href="#solutions">Solutions</NavLink>
@@ -54,7 +37,7 @@ const Header = () => {
             </nav>
           </div>
 
-          <div className="header-right" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <div className="header-right">
             <button 
               onClick={toggleTheme} 
               style={{ 

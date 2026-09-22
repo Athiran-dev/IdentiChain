@@ -159,7 +159,7 @@ export default function AuditorDashboard() {
   return (
     <div style={{ padding: '2rem 0' }}>
       {/* Top Header */}
-      <div className="glass-card-primary" style={{ padding: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+      <div className="glass-card-primary dashboard-header-flex" style={{ padding: '2rem' }}>
         <div>
           <h1 style={{ fontSize: '2rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>
             {getGreeting()}, {identity?.profile?.name || 'Auditor'} <span style={{ fontSize: '0.8rem', background: 'rgba(99, 102, 241, 0.1)', color: 'var(--primary-blue)', padding: '4px 10px', borderRadius: '12px', verticalAlign: 'middle', marginLeft: '1rem' }}>Auditor Clearance</span>
@@ -241,7 +241,7 @@ export default function AuditorDashboard() {
                 <div key={log._id} className="glass-card-secondary" style={{ padding: '1rem', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                   
                   {/* SUMMARY ROW */}
-                  <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 3fr 1fr auto', gap: '1rem', alignItems: 'center' }}>
+                  <div className="dashboard-log-list-grid">
                     <div>
                       <div style={{ fontWeight: '600', color: 'var(--primary-dark)', fontSize: '0.95rem' }}>{log.actionType}</div>
                       <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>

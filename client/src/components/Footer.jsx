@@ -117,7 +117,7 @@ const Footer = () => {
                 For a more secure and transparent tomorrow.
               </p>
               <div style={{ display: 'flex', gap: '1.5rem' }}>
-                <a href="#" aria-label="GitHub" style={{ color: 'white', transition: 'opacity 0.2s' }} onMouseEnter={e => e.currentTarget.style.opacity = 0.7} onMouseLeave={e => e.currentTarget.style.opacity = 1}>
+                <a href="https://github.com/Athiran-dev/IdentiChain" target="_blank" rel="noopener noreferrer" aria-label="GitHub" style={{ color: 'white', transition: 'opacity 0.2s' }} onMouseEnter={e => e.currentTarget.style.opacity = 0.7} onMouseLeave={e => e.currentTarget.style.opacity = 1}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </a>
                 <a href="#" aria-label="LinkedIn" style={{ color: 'white', transition: 'opacity 0.2s' }} onMouseEnter={e => e.currentTarget.style.opacity = 0.7} onMouseLeave={e => e.currentTarget.style.opacity = 1}>
@@ -158,6 +158,31 @@ const Footer = () => {
                 <li><a href="#" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.85rem' }} onMouseEnter={e => e.currentTarget.style.color = 'white'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Privacy Policy</a></li>
                 <li><a href="#" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.85rem' }} onMouseEnter={e => e.currentTarget.style.color = 'white'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Terms of Service</a></li>
                 <li><a href="#" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.85rem' }} onMouseEnter={e => e.currentTarget.style.color = 'white'} onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}>Contact Us</a></li>
+              </ul>
+            </div>
+
+            {/* Smart Contracts Links */}
+            <div style={{ gridColumn: 'span 2' }}>
+              <h4 style={{ color: 'white', fontWeight: 600, marginBottom: '1.5rem', fontSize: '0.95rem' }}>Smart Contracts (Sepolia)</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <li>
+                  <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', marginBottom: '0.2rem' }}>Identity Registry</div>
+                  <a href={`https://sepolia.etherscan.io/address/${import.meta.env.VITE_IDENTITY_REGISTRY_ADDRESS || '0xE97f4e0A31E9F6b5E1629294183F2b7FeC01DD79'}`} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--success-green)', textDecoration: 'none', fontSize: '0.8rem', wordBreak: 'break-all' }} onMouseEnter={e => e.currentTarget.style.textDecoration = 'underline'} onMouseLeave={e => e.currentTarget.style.textDecoration = 'none'}>
+                    {import.meta.env.VITE_IDENTITY_REGISTRY_ADDRESS || '0xE97f4e0A31E9F6b5E1629294183F2b7FeC01DD79'}
+                  </a>
+                </li>
+                <li>
+                  <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', marginBottom: '0.2rem' }}>Audit Registry</div>
+                  <a href={`https://sepolia.etherscan.io/address/${import.meta.env.VITE_AUDIT_REGISTRY_ADDRESS || '0xd465c059EE2DCAb139fb934C9a5D6A62f9B1a585'}`} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--success-green)', textDecoration: 'none', fontSize: '0.8rem', wordBreak: 'break-all' }} onMouseEnter={e => e.currentTarget.style.textDecoration = 'underline'} onMouseLeave={e => e.currentTarget.style.textDecoration = 'none'}>
+                    {import.meta.env.VITE_AUDIT_REGISTRY_ADDRESS || '0xd465c059EE2DCAb139fb934C9a5D6A62f9B1a585'}
+                  </a>
+                </li>
+                <li>
+                  <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.75rem', marginBottom: '0.2rem' }}>Asset NFT</div>
+                  <a href={`https://sepolia.etherscan.io/address/${import.meta.env.VITE_ASSET_NFT_ADDRESS || '0x21fBd36c6C6EBB7C42Fdb2a69dDB8Aa38E578735'}`} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--success-green)', textDecoration: 'none', fontSize: '0.8rem', wordBreak: 'break-all' }} onMouseEnter={e => e.currentTarget.style.textDecoration = 'underline'} onMouseLeave={e => e.currentTarget.style.textDecoration = 'none'}>
+                    {import.meta.env.VITE_ASSET_NFT_ADDRESS || '0x21fBd36c6C6EBB7C42Fdb2a69dDB8Aa38E578735'}
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

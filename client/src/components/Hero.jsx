@@ -7,16 +7,7 @@ import stamp from '../assets/AshokaStamp.png';
 
 const Hero = () => {
   return (
-    <section style={{
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      padding: '12rem 2rem 0 2rem',
-      background: 'var(--neo-bg)',
-      position: 'relative',
-      overflow: 'hidden',
-      transition: 'background 0.3s ease'
-    }}>
+    <section className="hero-section-wrapper">
       {/* Background Shapes */}
       <div style={{ position: 'absolute', top: 0, left: '-5%', width: '30%', height: '30%', background: 'rgba(235, 244, 255, 0.5)', borderRadius: '50%', filter: 'blur(80px)', zIndex: 0 }}></div>
       <div style={{ position: 'absolute', bottom: '10%', right: '-5%', width: '30%', height: '30%', background: 'rgba(235, 244, 255, 0.5)', borderRadius: '50%', filter: 'blur(80px)', zIndex: 0 }}></div>
@@ -114,12 +105,12 @@ const Hero = () => {
         justifyContent: 'center',
         transition: 'background 0.3s ease'
       }}>
-        <div style={{ maxWidth: '1300px', width: '100%', padding: '0 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div className="hero-trusted-flex">
           <div>
             <h4 style={{ color: 'var(--primary-dark)', fontSize: '1.2rem', fontWeight: 700, marginBottom: '0.25rem' }}>Trusted by Government & Enterprises</h4>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>Building a secure and transparent digital future together.</p>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '3rem' }}>
+          <div className="hero-trusted-logos">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
               <img src={stamp} alt="Government of India" style={{ height: '50px' }} />
               <div style={{ display: 'flex', flexDirection: 'column', color: 'var(--primary-dark)', fontWeight: 600, fontSize: '0.9rem' }}>

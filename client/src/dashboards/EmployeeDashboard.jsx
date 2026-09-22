@@ -149,7 +149,7 @@ export default function EmployeeDashboard() {
   return (
     <div style={{ padding: '2rem 0' }}>
       {/* Top Header */}
-      <div className="glass-card-primary" style={{ padding: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
+      <div className="glass-card-primary dashboard-header-flex" style={{ padding: '2rem' }}>
         <div>
           <h1 style={{ fontSize: '2rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>
             {getGreeting()}, {identity?.profile?.name || 'Employee'} <span style={{ fontSize: '0.8rem', background: 'rgba(99, 102, 241, 0.1)', color: 'var(--primary-blue)', padding: '4px 10px', borderRadius: '12px', verticalAlign: 'middle', marginLeft: '1rem' }}>Employee Clearance</span>
@@ -159,7 +159,7 @@ export default function EmployeeDashboard() {
       </div>
 
       {/* Metric Cards */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', marginBottom: '2rem' }}>
+      <div className="dashboard-metrics-grid">
         <div className="glass-card-primary" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Accessible Assets</div>
@@ -232,7 +232,7 @@ export default function EmployeeDashboard() {
           ) : (
             <div className="glass-card-primary" style={{ padding: '2rem' }}>
               <h3 style={{ marginBottom: '1.5rem' }}>Assets Available to You</h3>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+              <div className="dashboard-documents-grid">
                 {assets.map(doc => (
                   <DocumentCard
                     key={doc.tokenId}
