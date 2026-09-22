@@ -76,9 +76,9 @@ const LoginPortals = () => {
               <a href="#" style={{ fontSize: '0.85rem', fontWeight: '600' }}>View All &rarr;</a>
             </div>
             <ul style={{ listStyle: 'none', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--glass-border)' }}>SIH2026 - Internal Hackathon portal is now live.</li>
-              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--glass-border)' }}>Guidelines for Digital Signature Integration released.</li>
-              <li style={{ padding: '0.5rem 0' }}>System maintenance scheduled on 25 May 2026.</li>
+              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--glass-border)' }}>IdentiChain Sepolia Testnet is now live.</li>
+              <li style={{ padding: '0.5rem 0', borderBottom: '1px solid var(--glass-border)' }}>New guidelines for Verifiable Credentials released.</li>
+              <li style={{ padding: '0.5rem 0' }}>Smart Contract audits completed successfully.</li>
             </ul>
           </div>
 
