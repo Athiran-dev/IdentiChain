@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -6,9 +6,10 @@ import Services from './components/Services';
 import HowItWorks from './components/HowItWorks';
 import LoginPortals from './components/LoginPortals';
 import Footer from './components/Footer';
-import BackendTestHarness from './components/BackendTestHarness';
-import AppShell from './components/AppShell';
-import DashboardRouter from './components/DashboardRouter';
+
+const BackendTestHarness = lazy(() => import('./components/BackendTestHarness'));
+const AppShell = lazy(() => import('./components/AppShell'));
+const DashboardRouter = lazy(() => import('./components/DashboardRouter'));
 
 function LandingPage() {
   return (
@@ -31,6 +32,7 @@ function LandingPage() {
 
 function App() {
   return (
+    <Suspense fallback={<div style={{ textAlign: 'center', padding: '3rem' }}>Loading...</div>}>
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/dev-test" element={<BackendTestHarness />} />
@@ -38,6 +40,7 @@ function App() {
         <Route index element={<DashboardRouter />} />
       </Route>
     </Routes>
+    </Suspense>
   );
 }
 

@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { Suspense, lazy, useEffect, useMemo } from 'react';
 import { X, FileText, Shield } from 'lucide-react';
 import { VerificationBadge } from './DashboardComponents';
-import SecurePDFViewer from './SecurePDFViewer';
-import SecureCodeViewer from './SecureCodeViewer';
 import SecureImageViewer from './SecureImageViewer';
+const SecurePDFViewer = lazy(() => import('./SecurePDFViewer'));
+const SecureCodeViewer = lazy(() => import('./SecureCodeViewer'));
 
 /**
  * Known code/text file extensions (used for routing to Monaco).
@@ -139,6 +139,7 @@ export default function DocumentViewerModal({
 
         {/* Content area */}
         <div style={contentAreaStyle}>
+          <Suspense fallback={<div style={{ textAlign: 'center', padding: '2rem' }}>Loading viewer...</div>}>
           {renderer === 'pdf' ? (
             <SecurePDFViewer arrayBuffer={arrayBuffer} />
           ) : renderer === 'image' ? (
@@ -167,6 +168,7 @@ export default function DocumentViewerModal({
               </div>
             </div>
           )}
+          </Suspense>
         </div>
       </div>
     </div>

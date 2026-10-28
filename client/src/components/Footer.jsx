@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logowithName from '../assets/logowithName.png';
+import logowithName from '../assets/logowithName.webp';
 import { ArrowUp, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
@@ -110,7 +110,7 @@ const Footer = () => {
             {/* Brand Column */}
             <div style={{ gridColumn: 'span 2' }}>
               <div style={{ marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <img src={logowithName} alt="IdentiChain Logo" style={{ height: '36px', filter: 'brightness(0) invert(1)' }} />
+                <img src={logowithName} alt="IdentiChain Logo" width="108" height="36" loading="lazy" decoding="async" style={{ height: '36px', filter: 'brightness(0) invert(1)' }} />
               </div>
               <p style={{ fontSize: '0.85rem', lineHeight: 1.6, marginBottom: '2rem', maxWidth: '300px' }}>
                 Decentralized Identity & Asset Management.<br/>

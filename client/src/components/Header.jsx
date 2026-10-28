@@ -5,9 +5,9 @@ import { injected } from 'wagmi/connectors';
 import { useAuth } from './AuthContext';
 import { useTheme } from './ThemeContext';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../assets/logo.png';
-import stamp from '../assets/AshokaStamp.png';
-import belLogo from '../assets/belLogo.png';
+import logo from '../assets/logo.webp';
+import stamp from '../assets/AshokaStamp.webp';
+import belLogo from '../assets/belLogo.webp';
 
 const Header = () => {
   const { theme, toggleTheme } = useTheme();
@@ -24,7 +24,7 @@ const Header = () => {
         <header className="header-container">
           <div className="header-left">
             <Link to="/" className="header-logo-link">
-              <img src={logo} alt="IdentiChain" className="header-logo-img" />
+              <img src={logo} alt="IdentiChain" width="72" height="48" className="header-logo-img" decoding="async" />
               <span className="header-logo-text">IDENTICHAIN</span>
             </Link>
             

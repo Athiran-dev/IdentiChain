@@ -4,7 +4,7 @@ import { useAuth } from './AuthContext';
 import { useTheme } from './ThemeContext';
 import { LogOut, ShieldAlert, User, Edit3, Moon, Sun } from 'lucide-react';
 import ProfileModal from './ProfileModal';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.webp';
 
 function RoleBadge({ role }) {
   const colors = {
@@ -71,7 +71,7 @@ export default function AppShell() {
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
           <Link to="/app" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', gap: '0.75rem' }}>
-            <img src={logo} alt="IdentiChain" style={{ height: '56px' }} />
+            <img src={logo} alt="IdentiChain" width="84" height="56" decoding="async" style={{ height: '56px' }} />
             <span style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--primary-dark)', letterSpacing: '-0.5px' }}>IdentiChain</span>
           </Link>
           <RoleBadge role={role} />

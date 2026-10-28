@@ -1,9 +1,9 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck, Building2, Landmark } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroComponent from '../assets/heroComponenet.png';
-import belLogo from '../assets/belLogo.png';
-import stamp from '../assets/AshokaStamp.png';
+import heroComponent from '../assets/heroComponenet.webp';
+import belLogo from '../assets/belLogo.webp';
+import stamp from '../assets/AshokaStamp.webp';
 
 const Hero = () => {
   return (
@@ -90,7 +90,7 @@ const Hero = () => {
 
         {/* Right Content - 3D Illustration */}
         <div style={{ display: 'flex', justifyContent: 'center', position: 'relative' }}>
-          <img src={heroComponent} alt="IdentiChain Infrastructure" style={{ width: '100%', maxWidth: '650px', height: 'auto', display: 'block' }} />
+          <img src={heroComponent} alt="IdentiChain Infrastructure" width="650" height="433" fetchPriority="high" decoding="async" style={{ width: '100%', maxWidth: '650px', height: 'auto', display: 'block' }} />
         </div>
       </div>
 
@@ -112,14 +112,14 @@ const Hero = () => {
           </div>
           <div className="hero-trusted-logos">
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <img src={stamp} alt="Government of India" style={{ height: '50px' }} />
+              <img src={stamp} alt="Government of India" width="50" height="50" loading="lazy" decoding="async" style={{ height: '50px' }} />
               <div style={{ display: 'flex', flexDirection: 'column', color: 'var(--primary-dark)', fontWeight: 600, fontSize: '0.9rem' }}>
                 <span>Government of India</span>
               </div>
             </div>
             <div style={{ width: '1px', height: '40px', background: 'var(--border-color)' }}></div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <img src={belLogo} alt="Bharat Electronics Limited" style={{ height: '45px' }} />
+              <img src={belLogo} alt="Bharat Electronics Limited" width="124" height="45" loading="lazy" decoding="async" style={{ height: '45px' }} />
               <div style={{ display: 'flex', flexDirection: 'column' }}>
                 <span style={{ color: 'var(--primary-dark)', fontWeight: 700, fontSize: '0.9rem' }}>Bharat Electronics Limited</span>
                 <span style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Quality. Technology. Innovation</span>

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { useAuth } from './AuthContext';
-import OnboardingDashboard from '../dashboards/OnboardingDashboard';
-import EmployeeDashboard from '../dashboards/EmployeeDashboard';
-import ManagerDashboard from '../dashboards/ManagerDashboard';
-import AuditorDashboard from '../dashboards/AuditorDashboard';
-import AdminDashboard from '../dashboards/AdminDashboard';
+const OnboardingDashboard = lazy(() => import('../dashboards/OnboardingDashboard'));
+const EmployeeDashboard = lazy(() => import('../dashboards/EmployeeDashboard'));
+const ManagerDashboard = lazy(() => import('../dashboards/ManagerDashboard'));
+const AuditorDashboard = lazy(() => import('../dashboards/AuditorDashboard'));
+const AdminDashboard = lazy(() => import('../dashboards/AdminDashboard'));
 
 export default function DashboardRouter() {
   const { identity, loading } = useAuth();
@@ -25,6 +25,14 @@ export default function DashboardRouter() {
     );
   }
 
+  return (
+    <Suspense fallback={<div style={{ textAlign: 'center', padding: '3rem' }}>Loading dashboard...</div>}>
+      {renderDashboard(role)}
+    </Suspense>
+  );
+}
+
+function renderDashboard(role) {
   switch (role) {
     case 'NONE':
       return <OnboardingDashboard />;
